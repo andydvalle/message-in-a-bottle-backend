@@ -10,13 +10,6 @@ User.destroy_all
 Message.destroy_all
 Journal.destroy_all
 
-# 50.times do 
-#     User.create({
-    #         name: Faker::Name.first_name,
-    #         password: Faker::Name.last_name
-    #     })
-    # end
-
 User.create({
     name: "john",
     password: "john"
@@ -29,14 +22,6 @@ User.create({
     name: "klarissa",
     password: "klarissa"
 })
-
-# 10.times do
-#     Message.create({
-#         content: Faker::Hipster.paragraph,
-#         sender_user_id: User.all.sample.id, 
-#         receiver_user_id: User.all.sample.id
-#     })
-# end
 
 Message.create({
         content: "I had a dream last night that I was flying, I still secretly wish one day I will be soon",
@@ -55,11 +40,3 @@ Message.create({
         sender_user_id: 3, 
         receiver_user_id: 1
     })
-
-# 10.times do
-#     Journal.create({
-#         title: Faker::Hipster.sentence,
-#         content: Faker::Hipster.paragraph,
-#         user_id: User.all.sample.id
-#     })
-# end
