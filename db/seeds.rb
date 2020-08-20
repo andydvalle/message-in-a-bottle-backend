@@ -30,18 +30,36 @@ User.create({
     password: "klarissa"
 })
 
-10.times do
-    Message.create({
-        content: Faker::Hipster.paragraph,
-        sender_user_id: User.all.sample.id, 
-        receiver_user_id: User.all.sample.id
-    })
-end
+# 10.times do
+#     Message.create({
+#         content: Faker::Hipster.paragraph,
+#         sender_user_id: User.all.sample.id, 
+#         receiver_user_id: User.all.sample.id
+#     })
+# end
 
-10.times do
-    Journal.create({
-        title: Faker::Hipster.sentence,
-        content: Faker::Hipster.paragraph,
-        user_id: User.all.sample.id
+Message.create({
+        content: "I had a dream last night that I was flying, I still secretly wish one day I will be soon",
+        sender_user_id: 1, 
+        receiver_user_id: 2
     })
-end
+
+Message.create({
+        content: "I've been sending letters to all my high school enemies sent to random addresses",
+        sender_user_id: 2, 
+        receiver_user_id: 3
+    })
+
+Message.create({
+        content: "If you are reading this, please have a good day",
+        sender_user_id: 3, 
+        receiver_user_id: 1
+    })
+
+# 10.times do
+#     Journal.create({
+#         title: Faker::Hipster.sentence,
+#         content: Faker::Hipster.paragraph,
+#         user_id: User.all.sample.id
+#     })
+# end
